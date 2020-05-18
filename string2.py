@@ -3,8 +3,9 @@
 Kenzie assignment: String2
 """
 # Your name, plus anyone who helped you with this assignment.
+
 # Give credit where credit is due.
-__author__ = "Mavrick Watts"
+__author__ = "Mavrick Watts Assisted by Brandi Cotton"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -20,12 +21,16 @@ __author__ = "Mavrick Watts"
 # instead.
 # If the string length is less than 3, leave it unchanged.
 # Return the resulting string.
-
-
 def verbing(s):
-    # your code here
-    return
+  if len(s) >= 3:
+    if s.endswith('ing'):
+      return s + 'ly'
+    else:
+      return s + 'ing'
+  else:
+    return s 
 
+print(verbing("jumping"))
 
 # E. not_bad
 # Given a string, find the first occurrence of the substrings
@@ -35,10 +40,12 @@ def verbing(s):
 # Example:
 #   'This dinner is not that bad!' -> 'This dinner is good!'
 
-
-def not_bad(s):
-    # your code here
-    return
+def not_bad( s ):
+    bads_removed = s.split( "bad" )
+    nots_removed = bads_removed[0].split( "not" )
+    if len(bads_removed) > 1 < len(nots_removed):
+        return nots_removed[0] + "good" + "bad".join(bads_removed[1:])
+    return s
 
 
 # F. front_back
