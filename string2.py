@@ -5,7 +5,7 @@ Kenzie assignment: String2
 # Your name, plus anyone who helped you with this assignment.
 
 # Give credit where credit is due.
-__author__ = "Mavrick Watts Assisted by Brandi Cotton"
+__author__ = "Mavrick Watts Assisted by Brandi Cotton, and Daniel SE Instructor"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -59,8 +59,19 @@ def not_bad( s ):
 
 
 def front_back(a, b):
-    # your code here
-    return
+  a_mid = len(a) // 2
+  b_mid  = len(b) // 2
+  if len(a) % 2:
+    a_mid += 1
+  if len(b) % 2:
+    b_mid += 1
+
+  a_front = a[:a_mid]
+  b_front = b[:b_mid]
+  a_back = a[a_mid:]
+  b_back = b[b_mid:]
+  
+  return a_front + b_front + a_back + b_back
 
 
 # Provided simple test() function used in main() to print
